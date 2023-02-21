@@ -3,9 +3,13 @@ const homeElement = document.getElementById('home');
 
 const homeUnshow = () => {
   homeElement.classList.add('home--unshow');
-  homeElement.addEventListener('transitionend', () => {
-    menuShow();
-  });
+  homeElement.addEventListener(
+    'transitionend',
+    () => {
+      menuShow();
+    },
+    { once: true }
+  );
 };
 
 export { homeUnshow };

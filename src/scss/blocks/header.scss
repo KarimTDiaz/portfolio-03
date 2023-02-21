@@ -6,6 +6,7 @@
 .header{
     @include flexbox(flex,row,nowrap,space-between,center);
     position: fixed;
+    z-index: var(--z-index-100);
     width: 100vw;
-    padding: var(--pad-l);
+    padding: 1.5rem var(--pad-l);
 }

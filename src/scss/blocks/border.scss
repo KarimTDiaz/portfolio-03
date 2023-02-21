@@ -7,4 +7,28 @@
   bottom: var(--pad);
   pointer-events: none;
   border: 1px solid var(--secondary-color);
+  &--projects{
+    position: fixed;
+    z-index: 10;
+    left: var(--pad);
+    right: var(--pad);
+    top: 50vh;
+    bottom: var(--pad);
+    pointer-events: none;
+    border-bottom: 1px solid var(--primary-color);
+    border-left:1px solid var(--primary-color) ;
+    border-right: 1px solid var(--primary-color);
+    
+    transform: scaleY(0);
+    transition: transform 0.5s;
+    
+    transform-origin: bottom;
+    &-show{
+      transform: scaleY(1);
+    }
+    /* &-show{
+      display: block;
+    } */
+  }
+
 }

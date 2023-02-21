@@ -1,22 +1,37 @@
-@use '../mixins/flexbox.scss' as*;
-@use '../mixins/hover.scss' as*;
-@use '../mixins/pseudo.scss' as*;
-@use '../mixins/responsive.scss' as*;
+@use '../mixins/flexbox.scss' as *;
+@use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
 
-.projects{
-    position: fixed;
-    top: 0;
-    padding:0;
-    margin: 0;
-    height: 100vh;
-    &__item{
-        
-       height: 50vh;
-       &--js{
-        mix-blend-mode: difference;
+.projects {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  transform: translateY(100vh);
+  transform-origin: bottom;
+  transition: transform 0.8s;
+  transition-delay: 0.4s;
+  &--show{
+    transform: translateY(0);
+  }
 
-        
-       }
-        
+  &__item {
+    height: 50vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--third-color);
+
+    &--js {
+      background-color: var(--secondary-color);
+      color: var(--third-color);
+      
+      }
     }
-}
+  }
+
+

@@ -20,7 +20,20 @@
     font-size: var(--title-m);
   }
   &--small{
+    position: relative;
+    bottom: -30vh;
+    font-size: var(--title-xxl);
     margin-top: 0;
+    padding-left: 1.4rem;
+    &-css{
+      text-align: left;
+    }
+    &-js{
+      right: 1.4rem;
+      text-align: right;
+      bottom:0;
+    }
+
   }
   
   @include responsive(tablet){
