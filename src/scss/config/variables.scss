@@ -8,6 +8,8 @@
   --pad: max(20px, 2vmin);
   --pad-l:max(40px, 5vmin);
   --pad-xl:max(30px, 6vmin);
+
+  --menu-delay:0.8s;
 }
 
   $primary-color:#dadf00;
@@ -17,5 +19,7 @@
   $fifth-color:hsl(0, 0%, 100%);
 
   $pad: max(20px, 4vmin);
+  $pad-l:max(40px, 5vmin);
+  $pad-xl:max(30px, 6vmin);
 
 

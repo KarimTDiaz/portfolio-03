@@ -5,7 +5,7 @@
 
 .home{
     position: relative;
-    top: 3rem;
+    top: 8rem;
     padding: var(--pad-l);
     @include responsive(tablet){
         padding: var(--pad-xl); 
@@ -13,6 +13,7 @@
 }
 
 .home--unshow{
-  transform: translateY(150%) ;
-  transition: transform 1s;
+  transform: translateY(100vh) ;
+  transition: transform 0.5s;
+  transition-delay: 1s;
 }

@@ -1,0 +1,22 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../mixins/pseudo.scss' as*;
+@use '../mixins/responsive.scss' as*;
+
+.projects{
+    position: fixed;
+    top: 0;
+    padding:0;
+    margin: 0;
+    height: 100vh;
+    &__item{
+        
+       height: 50vh;
+       &--js{
+        mix-blend-mode: difference;
+
+        
+       }
+        
+    }
+}

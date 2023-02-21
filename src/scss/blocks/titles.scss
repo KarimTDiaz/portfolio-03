@@ -19,6 +19,9 @@
     font-family: var(--secondary-font-light);
     font-size: var(--title-m);
   }
+  &--small{
+    margin-top: 0;
+  }
   
   @include responsive(tablet){
     font-size: var(--title-xxl);
@@ -28,8 +31,10 @@
    
   }
   @include responsive(desktop){
-
-   
+    font-size: var(--title-xxxl);
+    &--logo {
+      font-size: var(--title-l);
+    }
   }
 }
 

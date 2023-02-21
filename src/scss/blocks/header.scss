@@ -5,7 +5,7 @@
 
 .header{
     @include flexbox(flex,row,nowrap,space-between,center);
-    position: relative;
+    position: fixed;
+    width: 100vw;
     padding: var(--pad-l);
-    
 }
