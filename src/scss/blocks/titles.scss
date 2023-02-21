@@ -1,1 +1,38 @@
+@use '../mixins/flexbox.scss' as *;
+@use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
 
+.title {
+    font-size: var(--title-xl);
+    font-family: var(--primary-font-bold);
+    margin-bottom: 2rem;
+  &--background {
+    background-image: url(../assets/images/bg-3.jpg);
+    background-size: 500px;
+    background-position: top;
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: rgba(255, 255, 255, 0);
+  }
+  &--logo {
+    font-family: var(--secondary-font-light);
+    font-size: var(--title-m);
+  }
+  
+  @include responsive(tablet){
+    font-size: var(--title-xxl);
+    &--logo {
+      font-size: var(--title-l);
+    }
+   
+  }
+  @include responsive(desktop){
+
+   
+  }
+}
+
+
+ 
+  

@@ -1,5 +1,49 @@
+@font-face {
+  font-family:feixen-bold ;
+  src: url('/assets/fonts/StudioFeixenSansTRIAL-Bold.ttf');
+}
+@font-face {
+  font-family:feixen-regular;
+  src: url('/assets/fonts/StudioFeixenSansTRIAL-Regular.ttf');
+}
+@font-face {
+  font-family:basis-bold ;
+  src: url('./assets/fonts/BasisGrotesqueMonoPro-Bold.ttf');
+}
+@font-face {
+  font-family:basis-light ;
+  src: url('./assets/fonts/BasisGrotesqueMonoPro-Light.ttf');
+}
+@font-face {
+  font-family:basis-regular;
+  src: url('./assets/fonts/BasisGrotesqueMonoPro-Regular.ttf');
+}
+@font-face {
+  font-family:basis-medium;
+  src: url('./assets/fonts/BasisGrotesqueMonoPro-Medium.ttf');
+}
+
+
+
 :root {
-    /* Variables CSS */
+    --primary-font-bold:feixen-bold;
+    --primary-font-regular:feixen-regular;
+    --secondary-font-bold:basis-bold;
+    --secondary-font-light:basis-light;
+    --secondary-font-regular:basis-regular;
+    --secondary-font-medium:basis-medium;
+
+
+    --title-xxl:8rem;
+    --title-xl:4rem;
+    --title-l:2rem;
+    --title-m:1.3rem;
+    --title-s:1rem;
+
+    --text-xl:2.5rem;
+    --text-l:2rem;
+    --text-m:1.2rem;
+    --text-s:0.8rem
   }
   
   /* Variables SASS */

@@ -1,4 +1,52 @@
-html {
-}
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../mixins/pseudo.scss' as*;
+@use '../mixins/responsive.scss' as*;
+
 body {
+    background-color: var(--primary-color);
+    @include responsive(desktop){
+        cursor: none;
+        &::after{
+            content: "";
+    position: fixed;
+    z-index: 999;
+    top: var(--y);
+    left: var(--x);
+    right: 0;
+    bottom: 0;
+    width: 3em;
+    height: 3em;
+    font-size: 1rem;
+    border-radius: 50%;
+    background: var(--primary-color);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    transition: width 0.4s ease-in-out;
+    transition: height 0.4s ease-in-out;
+    transform-origin: center
+        }
+    &.cursor-hovered::after{
+        width: 5rem;
+        height: 5rem;
+        content: "CLICK";
+        text-align: center;
+        font-family: var(--primary-font-regular);
+        color: var(--secondary-color);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: spin 4s infinite forwards cubic-bezier(1, 1, 1, 1);
+    }
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }

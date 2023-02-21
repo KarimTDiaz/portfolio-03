@@ -1,5 +1,21 @@
 :root {
-  /* Variables CSS */
+  --primary-color:hsl(68, 100%, 55%);
+  --secondary-color:hsl(0, 0%, 0%);
+  --third-color:hsl(204, 9%, 68%);
+  --fourth-color:hsl(204, 7%, 85%);
+  --fifth-color:hsl(0, 0%, 100%);
+
+  --pad: max(20px, 2vmin);
+  --pad-l:max(40px, 5vmin);
+  --pad-xl:max(30px, 6vmin);
 }
 
-/* Variables SASS */
+  $primary-color:#dadf00;
+  $secondary-color:hsl(0, 0%, 0%);
+  $third-color:hsl(204, 9%, 68%);
+  $fourth-color:hsl(204, 7%, 85%);
+  $fifth-color:hsl(0, 0%, 100%);
+
+  $pad: max(20px, 4vmin);
+
+

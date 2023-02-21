@@ -10,9 +10,49 @@
     <title>Vite Template</title>
   </head>
   <body>
-    <header class="header"></header>
-    <main class="main"></main>
+    
+    <header class="header">
+      <h1 class="title title--logo">KTDiaz...</h1>
+      <nav>
+        <ul class="menu" id="menu">
+          <li class="menu__item">
+            <a href="#home" class="menu__link"><span class="menu__link--index">01</span>Home</a>
+          </li>
+          <li class="menu__item">
+            <a href="#about" class="menu__link"><span class="menu__link--index">02</span>Projects</a>
+          </li>
+          <li class="menu__item">
+            <a href="#projects" class="menu__link"><span class="menu__link--index">03</span>About</a>
+          </li>
+          <li class="menu__item">
+            <a href="#contact" class="menu__link"><span class="menu__link--index">04</span>Contact</a>
+          </li>
+        </ul>
+      </nav>
+      <div id="menu-icon" class="menu__icon clickable">
+        <p class="menu__icon-text">MENU</p>
+      </div>
+    </header>
+    <main class="main">
+      <div id="home" class="home">
+        <div class="title-container">
+          <h1 class="title">Welc<span class="title--background">o</span>me <span class="title--background">to</span> my p<span class="title--background">o</span>rtf<span class="title--background">o</span>li<span class="title--background">o</span>
+          </h1>
+        </div>
+        <ul class="socials">
+          <li class="socials__item clickable">
+            <a href="" class="socials__link">Linkedin</a>
+          </li>
+          <li class="socials__item clickable">
+            <a href="" class="socials__link">Github</a>
+          </li>
+        </ul>
+      </div>
+    </main>
     <footer class="footer"></footer>
+   
+    <div class="noise"></div>
+    <div class="border"></div>
     <script type="module" src="./js/index.js"></script>
   </body>
 </html>

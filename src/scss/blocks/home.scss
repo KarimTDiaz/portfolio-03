@@ -3,9 +3,16 @@
 @use '../mixins/pseudo.scss' as*;
 @use '../mixins/responsive.scss' as*;
 
-.header{
-    @include flexbox(flex,row,nowrap,space-between,center);
+.home{
     position: relative;
+    top: 3rem;
     padding: var(--pad-l);
-    
+    @include responsive(tablet){
+        padding: var(--pad-xl); 
+    }
+}
+
+.home--unshow{
+  transform: translateY(150%) ;
+  transition: transform 1s;
 }

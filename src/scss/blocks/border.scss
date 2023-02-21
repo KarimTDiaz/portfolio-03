@@ -1,0 +1,10 @@
+.border {
+  position: fixed;
+  z-index: 10;
+  left: var(--pad);
+  right: var(--pad);
+  top: var(--pad);
+  bottom: var(--pad);
+  pointer-events: none;
+  border: 1px solid var(--secondary-color);
+}
