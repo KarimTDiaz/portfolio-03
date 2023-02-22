@@ -9,7 +9,8 @@ import {
   arrowElement,
   arrowUnDraw,
   projectsElement,
-  projectsUnShow
+  projectsUnShow,
+  borderYellow
 } from './projects.js';
 
 const menuIconElement = document.getElementById('menu-icon');
@@ -37,6 +38,7 @@ menuProjectsElement.addEventListener('click', ev => {
 projectsElement.addEventListener('click', ev => {
   arrowUnDraw(ev.target);
   projectsUnShow();
+  borderYellow(ev.target);
 });
 
 document.onmousemove = function (e) {

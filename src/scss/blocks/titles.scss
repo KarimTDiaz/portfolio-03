@@ -4,9 +4,12 @@
 @use '../mixins/responsive.scss' as *;
 
 .title {
+  max-width: 1300px;
+  margin-bottom: 2rem;
+
     font-size: var(--title-xl);
     font-family: var(--primary-font-bold);
-    margin-bottom: 2rem;
+    
     @include responsive(tablet){
       font-size: var(--title-xxl);
     }@include responsive(desktop){
@@ -14,7 +17,7 @@
     }
 
   &--background {
-    background-image: url(../assets/images/bg-3.jpg);
+    background-image: url('/assets/images/bg-3.jpg');
     background-size: 500px;
     background-position: top;
     background-repeat: repeat;
@@ -52,11 +55,13 @@
     }
     &-css{
       text-align: left;
+      pointer-events: none;
     }
     &-js{
       right: 1.4rem;
       text-align: right;
       bottom:0;
+      pointer-events: none;
       @include responsive(desktop){
         right: 10rem;
         bottom: -10vh;

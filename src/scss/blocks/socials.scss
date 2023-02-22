@@ -13,11 +13,10 @@
         &::after{
             @include pseudo(1rem, 1rem){
                left: 38%;
-                background-image: url(../assets/images/right-arrow.svg);
+                background-image: url('/assets/images/right-arrow.svg');
                 
             }
         }
-
     }
     &__link{
         font-size: var(--text-m);
