@@ -7,6 +7,12 @@
     font-size: var(--title-xl);
     font-family: var(--primary-font-bold);
     margin-bottom: 2rem;
+    @include responsive(tablet){
+      font-size: var(--title-xxl);
+    }@include responsive(desktop){
+      font-size: var(--title-xxxl);
+    }
+
   &--background {
     background-image: url(../assets/images/bg-3.jpg);
     background-size: 500px;
@@ -15,16 +21,35 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
   }
+
   &--logo {
     font-family: var(--secondary-font-light);
     font-size: var(--title-m);
+    @include responsive(tablet){
+      font-size: var(--title-l);
+    }
+    @include responsive(desktop){
+      font-size: var(--title-l);
+    }
   }
+
   &--small{
     position: relative;
     bottom: -30vh;
     font-size: var(--title-xxl);
     margin-top: 0;
     padding-left: 1.4rem;
+    @include responsive(tablet){
+      font-size: var(--title-xxxxl);
+    }
+    @include responsive(laptop){
+      bottom: -22vh;
+    }
+    @include responsive(desktop){
+      font-size: var(--title-xxxxxl);
+      padding-left: 10rem;
+      bottom: -15vh;
+    }
     &-css{
       text-align: left;
     }
@@ -32,23 +57,14 @@
       right: 1.4rem;
       text-align: right;
       bottom:0;
+      @include responsive(desktop){
+        right: 10rem;
+        bottom: -10vh;
+      }
     }
 
   }
-  
-  @include responsive(tablet){
-    font-size: var(--title-xxl);
-    &--logo {
-      font-size: var(--title-l);
-    }
-   
-  }
-  @include responsive(desktop){
-    font-size: var(--title-xxxl);
-    &--logo {
-      font-size: var(--title-l);
-    }
-  }
+
 }
 
 

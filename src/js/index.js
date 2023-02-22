@@ -3,7 +3,14 @@ import '../scss/styles.scss';
 import { click } from './cursor.js';
 import { homeUnshow } from './home.js';
 import { menuShow, menuItemsElement } from './menu';
-import { projectsShow, borderProjects } from './projects.js';
+import {
+  projectsShow,
+  borderProjects,
+  arrowElement,
+  arrowUnDraw,
+  projectsElement,
+  projectsUnShow
+} from './projects.js';
 
 const menuIconElement = document.getElementById('menu-icon');
 const menuElement = document.getElementById('menu');
@@ -26,6 +33,10 @@ menuElement.addEventListener('click', ev => {
 });
 menuProjectsElement.addEventListener('click', ev => {
   projectsShow();
+});
+projectsElement.addEventListener('click', ev => {
+  arrowUnDraw(ev.target);
+  projectsUnShow();
 });
 
 document.onmousemove = function (e) {
