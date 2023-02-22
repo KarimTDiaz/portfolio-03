@@ -4,11 +4,15 @@ const borderElement = document.getElementById('border-projects');
 const arrowElement = document.querySelectorAll('.draw-arrow');
 
 const borderProjects = () => {
-  borderElement.classList.add('border--projects-show');
   if (borderElement.classList.contains('border--projects-show')) {
     borderElement.classList.remove('border--projects-show');
+  } else {
+    borderElement.classList.add('border--projects-show');
   }
 };
+
+const borderYellow = ev => {};
+
 const arrowDraw = ev => {
   arrowElement.forEach(element => {
     element.classList.add('draw-arrow--show');
@@ -20,6 +24,7 @@ const arrowUnDraw = ev => {
       element.classList.add('draw-arrow--unshow');
     }
   });
+  borderProjects();
 };
 
 const projectsShow = () => {
@@ -45,11 +50,14 @@ const projectsUnShow = ev => {
   });
 };
 
+const projectsCssShow = () => {};
+
 export {
   projectsShow,
   borderProjects,
   arrowElement,
   arrowUnDraw,
   projectsElement,
-  projectsUnShow
+  projectsUnShow,
+  borderYellow
 };
