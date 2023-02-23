@@ -1,17 +1,22 @@
 const projectsElement = document.getElementById('projects');
+const projectsCssElement = document.getElementById('projects-css');
+const projectsJsElement = document.getElementById('projects-js');
 const projectsItemsElement = document.querySelectorAll('.projects__item');
-const borderElement = document.getElementById('border-projects');
+const borderProjectsElement = document.getElementById('border-projects');
 const arrowElement = document.querySelectorAll('.draw-arrow');
+const borderElement = document.getElementById('border');
 
 const borderProjects = () => {
-  if (borderElement.classList.contains('border--projects-show')) {
-    borderElement.classList.remove('border--projects-show');
+  if (borderProjectsElement.classList.contains('border--projects-show')) {
+    borderProjectsElement.classList.remove('border--projects-show');
   } else {
-    borderElement.classList.add('border--projects-show');
+    borderProjectsElement.classList.add('border--projects-show');
   }
 };
 
-const borderYellow = ev => {};
+const borderGrey = ev => {
+  borderElement.classList.add('border--grey');
+};
 
 const arrowDraw = ev => {
   arrowElement.forEach(element => {
@@ -25,6 +30,7 @@ const arrowUnDraw = ev => {
     }
   });
   borderProjects();
+  borderGrey();
 };
 
 const projectsShow = () => {
@@ -50,7 +56,13 @@ const projectsUnShow = ev => {
   });
 };
 
-const projectsCssShow = () => {};
+const projectsListShow = ev => {
+  if (ev.classList.contains('projects__item--css')) {
+    projectsCssElement.classList.add('projects-list-container--show');
+  } else {
+    projectsJsElement.classList.add('projects-list-container--show');
+  }
+};
 
 export {
   projectsShow,
@@ -59,5 +71,6 @@ export {
   arrowUnDraw,
   projectsElement,
   projectsUnShow,
-  borderYellow
+  borderGrey,
+  projectsListShow
 };

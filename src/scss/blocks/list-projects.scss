@@ -1,0 +1,50 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../mixins/pseudo.scss' as*;
+@use '../mixins/responsive.scss' as*;
+
+
+.projects-list-container{
+    &--css{
+        transform: translateY(100vh);
+    }
+    &--js{
+        transform: translateY(100vh);
+    }
+   &--show{
+    position: fixed;
+    top: 0;
+    transform: translateY(0);
+   }
+}
+
+
+.projects-list{
+    height: 100vh;
+    width: 100vw;
+    padding:30vh var(--pad-l);
+    padding-right: 0;
+    background-color: var(--secondary-color);
+    @include responsive(tablet){
+        padding-left: 10vh;
+    }
+    @include responsive(laptop){
+        padding-left: 55vw;
+    }
+    &__item{
+        margin-bottom: 1.5rem;
+    }
+    &__link{
+        font-size: var(--text-l);
+        font-family: var(--secondary-font-medium);
+        color: var(--third-color);
+        @include responsive(tablet){
+            font-size: var(--text-xxl);
+        }
+        &--index{
+            padding-right: 0.5rem;
+      font-family: sans-serif;
+      font-size: var(--text-s);
+        }
+    }
+}

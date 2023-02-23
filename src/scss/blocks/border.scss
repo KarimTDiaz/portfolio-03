@@ -2,18 +2,20 @@
 
 .border {
   position: fixed;
-  z-index: 10;
+  z-index: var(--z-index-1000);
   left: var(--pad);
   right: var(--pad);
   top: var(--pad);
   bottom: var(--pad);
   pointer-events: none;
   border: 1px solid var(--secondary-color);
-  
+  &--grey{
+    border: 1px solid var(--third-color);  
+  }
   
   &--projects{
     position: fixed;
-    z-index: 10;
+    z-index: var(--z-index-1000);
     left: var(--pad);
     right: var(--pad);
     top: 50vh;
@@ -29,6 +31,7 @@
     &-show{
       transform: scaleY(1);
     }
+    
     
   }
 
