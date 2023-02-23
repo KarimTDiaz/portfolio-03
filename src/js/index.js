@@ -11,7 +11,8 @@ import {
   projectsElement,
   projectsUnShow,
   borderGrey,
-  projectsListShow
+  projectsListShow,
+  projectsCssElement
 } from './projects.js';
 
 const menuIconElement = document.getElementById('menu-icon');
@@ -40,6 +41,10 @@ projectsElement.addEventListener('click', ev => {
   arrowUnDraw(ev.target);
   projectsUnShow();
   projectsListShow(ev.target);
+});
+
+projectsCssElement.addEventListener('mouseover', ev => {
+  console.log(ev.target);
 });
 
 document.onmousemove = function (e) {

@@ -1,0 +1,20 @@
+@use '../mixins/flexbox.scss' as*;
+@use '../mixins/hover.scss' as*;
+@use '../mixins/pseudo.scss' as*;
+@use '../mixins/responsive.scss' as*;
+.projects-image-container{
+    display: none;
+    @include responsive(laptop){
+        display: block;
+        position: absolute;
+    bottom: 0;
+    }
+}
+.project-image{
+    width: 42vw;
+    height: 850px;
+    max-width: 1000px;
+    padding: var(--pad);
+border-top-right-radius: 135px;
+object-fit: cover;
+}

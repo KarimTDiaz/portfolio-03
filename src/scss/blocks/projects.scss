@@ -19,6 +19,10 @@
   &--show{
     transform: translateY(0);
   }
+  &--unshow{
+    transform: translateY(100vh);
+    transition-delay: 2s;
+  }
 
   &__item {
     height: 50vh;

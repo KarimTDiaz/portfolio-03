@@ -34,7 +34,11 @@ const arrowUnDraw = ev => {
 };
 
 const projectsShow = () => {
-  projectsElement.classList.add('projects--show');
+  if (!projectsElement.classList.contains('projects--show')) {
+    projectsElement.classList.add('projects--show');
+  } else {
+    projectsElement.classList.add('projects--unshow');
+  }
   projectsElement.addEventListener(
     'transitionend',
     () => {
@@ -53,6 +57,7 @@ const projectsUnShow = ev => {
       element.classList.add('projects__item--js-unshow');
     }
     borderProjects();
+    projectsShow();
   });
 };
 
@@ -72,5 +77,6 @@ export {
   projectsElement,
   projectsUnShow,
   borderGrey,
-  projectsListShow
+  projectsListShow,
+  projectsCssElement
 };

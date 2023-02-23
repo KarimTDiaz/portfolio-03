@@ -5,6 +5,11 @@
 
 
 .projects-list-container{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--secondary-color);
+   
     &--css{
         transform: translateY(100vh);
     }
@@ -20,25 +25,31 @@
 
 
 .projects-list{
-    height: 100vh;
-    width: 100vw;
-    padding:30vh var(--pad-l);
-    padding-right: 0;
-    background-color: var(--secondary-color);
+   position: absolute;
+   right: 18vw;
+   top: 20vh;
     @include responsive(tablet){
-        padding-left: 10vh;
+        
     }
     @include responsive(laptop){
-        padding-left: 55vw;
+        
     }
     &__item{
+        width: 30vw;
         margin-bottom: 1.5rem;
+        border-bottom: 2px solid var(--third-color);
+        @include responsive(laptop){
+        margin-bottom: 2rem;
+        }
     }
     &__link{
         font-size: var(--text-l);
         font-family: var(--secondary-font-medium);
         color: var(--third-color);
         @include responsive(tablet){
+            font-size: var(--text-xxl);
+        }
+        @include responsive(laptop){
             font-size: var(--text-xxl);
         }
         &--index{
