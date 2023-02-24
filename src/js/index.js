@@ -12,8 +12,10 @@ import {
   projectsUnShow,
   borderGrey,
   projectsListShow,
-  projectsCssElement
+  projectsCssElement,
+  projectsJsElement
 } from './projects.js';
+import { projectImageHover } from './hover-projects.js';
 
 const menuIconElement = document.getElementById('menu-icon');
 const menuElement = document.getElementById('menu');
@@ -44,7 +46,10 @@ projectsElement.addEventListener('click', ev => {
 });
 
 projectsCssElement.addEventListener('mouseover', ev => {
-  console.log(ev.target);
+  projectImageHover(ev.target.dataset.projecthover);
+});
+projectsJsElement.addEventListener('mouseover', ev => {
+  projectImageHover(ev.target.dataset.projecthover);
 });
 
 document.onmousemove = function (e) {

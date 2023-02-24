@@ -78,5 +78,6 @@ export {
   projectsUnShow,
   borderGrey,
   projectsListShow,
-  projectsCssElement
+  projectsCssElement,
+  projectsJsElement
 };

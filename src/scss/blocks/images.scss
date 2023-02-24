@@ -1,20 +1,22 @@
-@use '../mixins/flexbox.scss' as*;
-@use '../mixins/hover.scss' as*;
-@use '../mixins/pseudo.scss' as*;
-@use '../mixins/responsive.scss' as*;
-.projects-image-container{
-    display: none;
-    @include responsive(laptop){
-        display: block;
-        position: absolute;
+@use '../mixins/flexbox.scss' as *;
+@use '../mixins/hover.scss' as *;
+@use '../mixins/pseudo.scss' as *;
+@use '../mixins/responsive.scss' as *;
+.projects-image-container {
+    position: absolute;
     bottom: 0;
-    }
+  display: none;
+  max-width: 1000px;
+  max-height: 700px;
+  width: 45vw;
+  height: 80vh;
+  padding: var(--pad);
+  @include responsive(laptop) {
+    display: block;
+  }
 }
-.project-image{
-    width: 42vw;
-    height: 850px;
-    max-width: 1000px;
-    padding: var(--pad);
-border-top-right-radius: 135px;
-object-fit: cover;
+.project-image {
+  border-top-right-radius: 135px;
+  object-fit: cover;
+  
 }
